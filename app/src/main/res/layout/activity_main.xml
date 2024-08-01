@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/strStopwatch"
+        android:text="StopWatch Application"
+        android:layout_centerHorizontal="true"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:padding="10dp"
+        android:background="#000"
+        android:gravity="center"
+        android:textColor="#fff"/>
+
+<!-- show minute, second and millisecond display   -->
+  <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:id="@+id/layout1"
+      android:layout_below="@+id/strStopwatch"
+      android:layout_centerHorizontal="true"
+      android:layout_marginTop="70dp">
+
+   <TextView
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:id="@+id/minuteDisplay"
+       android:text="00"
+       android:textStyle="bold"
+       android:textSize="60sp"/>
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:id="@+id/secondDisplay"
+          android:text="00"
+          android:textStyle="bold"
+          android:textSize="60sp"/>
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:id="@+id/milliDisplay"
+          android:text="00"
+          android:textStyle="bold"
+          android:textSize="60sp"/>
+
+
+  </LinearLayout>
+
+<!-- buttons to start, pause and reset the timer  -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/layout2"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/layout1"
+        android:layout_centerHorizontal="true">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnStart"
+            android:text="Start"
+            android:textSize="20sp"
+            android:backgroundTint="#000"
+            android:layout_marginRight="8dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnPause"
+            android:text="Pause"
+            android:textSize="20sp"
+            android:backgroundTint="#000"
+            android:layout_marginRight="8dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnReset"
+            android:text="Reset"
+            android:textSize="20sp"
+            android:backgroundTint="#000"
+            android:layout_marginRight="8dp"/>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
